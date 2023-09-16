@@ -54,7 +54,7 @@ const Form = () => {
 
         <article className="section__video">
           <video autoPlay loop muted playsInline className="videolist">
-            <source src="/public/images/video2.mp4" type="video/mp4"></source>
+            <source src="./images/video2.mp4" type="video/mp4"></source>
           </video>
         </article>
       </section>
