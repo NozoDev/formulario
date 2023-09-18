@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
+import { GoogleLogin } from "react-google-login";
+
 const Form = () => {
   const [formDate, setFormDate] = useState({
     nombre: "",
@@ -34,6 +36,14 @@ const Form = () => {
     });
   };
 
+  const handleGoogleLoginSuccess = (response) => {
+    console.log("Token de acceso de Google:", response.accessToken);
+  };
+
+  const handleGoogleLoginError = (error) => {
+    console.log("error de inicio sesion de google", error);
+  };
+
   return (
     <main className="main__form">
       <section className="section__form">
@@ -42,12 +52,13 @@ const Form = () => {
             <section className="section__info">
               <h1 className="text">Welcome</h1>
               <p>Welcome to Dashboard</p>
-              <a href="https://www.google.com/" target="_blank">
-                <i className="bx bxl-google-plus-circle">
-                  Continue With Google
-                </i>
-              </a>
-
+              <GoogleLogin
+                clientId="13846722713-5oou3m23e7tpfalf04kc9ijbkaqerj71.apps.googleusercontent.com"
+                onSuccess={handleGoogleLoginSuccess}
+                onFailure={handleGoogleLoginError}
+                cookiePolicy={"single_host_origin"}
+                buttonText="Iniciar sesión con Google"
+              />
               <p>-----or-----</p>
             </section>
 
