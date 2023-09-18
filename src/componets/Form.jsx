@@ -10,7 +10,10 @@ const Form = () => {
               <h1 className="text">Welcome</h1>
               <p>Welcome to Dashboard</p>
               <a href="https://www.google.com/" target="_blank">
-                Continue With Google
+                <i className="bx bxl-google-plus-circle">
+
+                  Continue With Google
+                </i>
               </a>
 
               <p>-----or-----</p>
