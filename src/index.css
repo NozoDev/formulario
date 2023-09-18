@@ -7,6 +7,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: rgba(222, 218, 218, 0.052);
+  font-family: "Lato", sans-serif;
 }
 
 a {
@@ -95,4 +96,36 @@ a {
   justify-content: center;
   gap: 8px;
   font-size: 35px;
+}
+
+.btn__input {
+  border-radius: 10px;
+  height: 30px;
+  font-weight: 800;
+}
+
+.check__box {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.label__description {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .section__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__form {
+    width: 250px;
+  }
+
+  .btn__btn {
+    width: 100%;
+  }
 }
