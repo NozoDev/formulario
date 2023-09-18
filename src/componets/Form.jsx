@@ -26,9 +26,9 @@ const Form = () => {
     });
 
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "success",
-      title: "Your work has been saved",
+      title: "Successful registration",
       showConfirmButton: false,
       timer: 1500,
     });
